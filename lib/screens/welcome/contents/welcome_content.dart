@@ -1,6 +1,7 @@
 import 'package:auth_ui/constants.dart';
 import 'package:auth_ui/contents/custom_buttom.dart';
 import 'package:auth_ui/screens/login/login_screen.dart';
+import 'package:auth_ui/screens/signup/signup_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -63,7 +64,7 @@ class WelcomeContent extends StatelessWidget {
               context,
               MaterialPageRoute(
                 builder: (context) {
-                  return LoginScreen();
+                  return SignUpScreen();
                 },
               ),
             );

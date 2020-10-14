@@ -1,6 +1,7 @@
 import 'package:auth_ui/constants.dart';
 import 'package:auth_ui/contents/custom_buttom.dart';
 import 'package:auth_ui/contents/custom_textfiled.dart';
+import 'package:auth_ui/screens/signup/signup_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -29,7 +30,7 @@ class LoginContent extends StatelessWidget {
         ),
         SvgPicture.asset(
           'assets/icons/login.svg',
-          width: size.width * 0.8,
+          width: size.width * 0.6,
         ),
         TextFieldContainer(
           size: size,
@@ -73,6 +74,7 @@ class LoginContent extends StatelessWidget {
               ),
               suffixIcon: IconButton(
                 icon: Icon(Icons.visibility_outlined),
+                color: kPrimaryColor,
                 onPressed: () {},
               ),
             ),
@@ -85,6 +87,37 @@ class LoginContent extends StatelessWidget {
           textColor: Colors.white,
           bgColor: kPrimaryColor,
           press: () {},
+        ),
+        SizedBox(height: defaultPadding),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Don\'t have an Account? | ',
+              style: TextStyle(
+                color: kPrimaryColor,
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return SignUpScreen();
+                    },
+                  ),
+                );
+              },
+              child: Text(
+                'Sign Up',
+                style: TextStyle(
+                  color: kPrimaryColor,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ],
         ),
       ],
     );

@@ -6,9 +6,11 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Background(
-      size: size,
-      child: LoginContent(size: size),
+    return SingleChildScrollView(
+      child: Background(
+        size: size,
+        child: LoginContent(size: size),
+      ),
     );
   }
 }
